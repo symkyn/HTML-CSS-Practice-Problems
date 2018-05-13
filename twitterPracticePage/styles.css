@@ -1,0 +1,146 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+body {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        'highlights login'  
+        'footer footer';
+    
+  }
+
+a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+a:focus,
+a:hover {
+    outline:none;
+    text-decoration: underline;
+}
+
+  .blue-background-box {
+    background-color: #1da1f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    grid-area: highlights;
+    justify-content: center;
+}
+
+.blue-background-box,
+.signup-block {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.box {
+    text-align: left;
+}
+
+.Login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: login;
+    padding: 20px;
+}
+
+.Login-box input{
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: .6em;
+    
+}
+
+form[name="Log-in"] > * {
+    margin: 5px;
+}
+
+form[name="Log-in"] {
+    display: flex;
+    align-items: flex-start;
+    max-width: 550px;
+    margin-bottom: 100px;
+}
+
+form[name="Log-in"] >div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;   
+}
+
+form[name="Log-in"] button[type="submit"]{
+    width: 60px;
+    border: 1px solid #1da1f2;
+    border-radius: 90px;
+    height: 45px;
+    white-space: nowrap;
+    background-color: transparent;
+    padding: .5em .8em;
+    font-weight: 600;
+    color: #1da1f2;
+}
+
+.signup-block {
+    width: 300px;
+}
+.signup-block h1 {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+.submit {
+    width: 70px;
+    border: 1px solid #1da1f2;
+    border-radius: 90px;
+    height: 45px;
+    white-space: nowrap;
+    background-color: #1da1f2;
+    padding: .5em .8em;
+    font-weight: 600;
+    color: white;
+}
+
+.Login-button {
+    width: 70px;
+    border: 1px solid #1da1f2;
+    border-radius: 90px;
+    height: 45px;
+    white-space: nowrap;
+    background-color: transparent;
+    padding: .5em .8em;
+    font-weight: 600;
+    color: #1da1f2;
+}
+
+.signup-block .submit,
+.signup-block .Login-button {
+    height: auto;
+    padding: .5em .8em;
+    font-size: .7em;
+    width: 100%;
+
+}
+
+footer {
+    clear: both;
+    grid-area: footer;
+    text-align: center;
+    border-top: 1px solid #eee;
+    display:  flex;
+    justify-content: center;
+    font-size: 12px;
+}
+footer > * {
+    margin: 0 20px;
+}
